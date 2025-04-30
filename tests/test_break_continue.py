@@ -1,7 +1,6 @@
 """
 测试练习: break和continue语句
 """
-import pytest
 import sys
 import os
 
@@ -13,6 +12,7 @@ from exercises.break_continue import skip_multiples_of_three
 
 def test_skip_multiples_of_three():
     """测试跳过3的倍数的函数"""
+   
     # 测试正常情况
     assert skip_multiples_of_three(10) == [1, 2, 4, 5, 7, 8, 10]
     assert skip_multiples_of_three(5) == [1, 2, 4, 5]

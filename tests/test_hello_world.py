@@ -1,7 +1,7 @@
 """
 测试练习: print 输出语句
 """
-import pytest
+import pytest # type: ignore
 import sys
 import os
 import io

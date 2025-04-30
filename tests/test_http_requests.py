@@ -1,10 +1,10 @@
 """
 测试练习: HTTP请求
 """
-import pytest
+import pytest # type: ignore
 import sys
 import os
-import responses  # 需要安装：pip install responses
+import responses  # type: ignore # 需要安装：pip install responses
 
 # 添加exercises目录到Python路径
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))

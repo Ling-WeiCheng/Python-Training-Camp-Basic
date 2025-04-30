@@ -1,7 +1,7 @@
 """
 测试练习: 正则表达式匹配
 """
-import pytest
+import pytest # type: ignore
 import sys
 import os
 

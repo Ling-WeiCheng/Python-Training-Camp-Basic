@@ -20,35 +20,41 @@ def find_emails(text):
     pass
 
 
-def is_valid_phone_number(phone):
-    """
-    验证字符串是否为有效的中国手机号码。
-    有效的手机号码应该:
-    1. 长度为11位
-    2. 以1开头
-    3. 第二位是3-9之间的数字
-    4. 全部由数字组成
-    
-    参数:
-        phone (str): 要验证的电话号码字符串
-        
-    返回:
-        bool: 如果是有效的手机号码则返回True，否则返回False
-    """
-    # 实现你的代码: 验证手机号码是否合法
-    pass
+import re
 
-
-def extract_urls(text):
+def find_emails(text):
     """
-    从文本中提取所有的URL链接。
+    从文本中提取所有的电子邮件地址。
     
     参数:
         text (str): 要搜索的文本
         
     返回:
-        list: 文本中找到的所有URL的列表
+        list: 文本中找到的所有电子邮件地址的列表
     """
-    # 实现你的代码: 使用正则表达式提取所有URL
-    # 需要考虑http://和https://开头的URL
-    pass 
+    if not isinstance(text, str):
+        return []
+    # 邮箱正则表达式模式
+    pattern = r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
+    return re.findall(pattern, text)
+
+def is_valid_phone_number(phone):
+    """
+    验证字符串是否为有效的中国手机号码。
+    """
+    if not isinstance(phone, (str, int)):
+        return False
+    # 转换为字符串并检查格式
+    phone_str = str(phone)
+    pattern = r'^1[3-9]\d{9}$'
+    return bool(re.match(pattern, phone_str))
+
+def extract_urls(text):
+    """
+    从文本中提取所有的URL链接。
+    """
+    if not isinstance(text, str):
+        return []
+    # URL正则表达式模式
+    pattern = r'https?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\(\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+'
+    return re.findall(pattern, text)

@@ -1,7 +1,7 @@
 """
 测试练习: Python变量和数据类型
 """
-import pytest
+import pytest # type: ignore
 import sys
 import os
 

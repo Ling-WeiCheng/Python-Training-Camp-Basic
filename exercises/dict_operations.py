@@ -20,4 +20,45 @@ def student_dict_operations(students_dict, operation, *args):
     - 根据操作返回不同结果
     """
     # 请在下方编写代码
-    pass 
+    # 添加学生成绩
+    if operation == "add":
+        if len(args) != 2:
+            return "参数错误"
+        name, score = args
+        if name in students_dict:
+            return "学生已存在"
+        students_dict[name] = score
+        return students_dict
+    
+    # 删除学生成绩
+    elif operation == "remove":
+        if len(args) != 1:
+            return "参数错误"
+        name = args[0]
+        if name not in students_dict:
+            return "学生不存在"
+        del students_dict[name]
+        return students_dict
+    
+    # 更新学生成绩
+    elif operation == "update":
+        if len(args) != 2:
+            return "参数错误"
+        name, new_score = args
+        if name not in students_dict:
+            return "学生不存在"
+        students_dict[name] = new_score
+        return students_dict
+    
+    # 查询学生成绩
+    elif operation == "get":
+        if len(args) != 1:
+            return "参数错误"
+        name = args[0]
+        if name not in students_dict:
+            return "学生不存在"
+        return students_dict[name]
+    
+    else:
+        return "操作类型错误"
+        

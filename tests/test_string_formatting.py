@@ -1,7 +1,7 @@
 """
 测试练习: 字符串格式化
 """
-import pytest
+import pytest # type: ignore
 import sys
 import os
 

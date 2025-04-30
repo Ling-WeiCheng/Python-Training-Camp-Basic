@@ -22,5 +22,15 @@ def check_grade(score):
     返回:
     - 对应的等级：优秀、良好、中等、及格、不及格
     """
-    # 请在下方编写代码
-    pass 
+    if not isinstance(score, (int, float)) or score < 0 or score > 100:
+        return "输入错误"
+    elif score >= 90:
+        return "优秀"
+    elif score >= 80:
+        return "良好"
+    elif score >= 70:
+        return "中等"
+    elif score >= 60:
+        return "及格"
+    else:
+        return "不及格" 

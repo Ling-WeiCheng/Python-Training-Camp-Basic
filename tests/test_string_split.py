@@ -1,7 +1,7 @@
 """
 测试练习: 字符串分割
 """
-import pytest
+import pytest # type: ignore
 import sys
 import os
 

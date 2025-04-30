@@ -17,9 +17,9 @@ def extract_keywords(text):
     返回:
     - 提取出的关键词列表
     """
-    # 请在下方编写代码
-    # 使用split()方法分割字符串，返回关键词列表
-    pass
+    if not isinstance(text, str):
+        return []
+    return text.split()
 
 def parse_csv_line(csv_line):
     """
@@ -31,9 +31,9 @@ def parse_csv_line(csv_line):
     返回:
     - 包含各字段的列表
     """
-    # 请在下方编写代码
-    # 使用split()方法分割CSV行，返回字段列表
-    pass
+    if not isinstance(csv_line, str):
+        return []
+    return csv_line.split(',')
 
 def extract_name_and_domain(email):
     """
@@ -45,6 +45,7 @@ def extract_name_and_domain(email):
     返回:
     - 包含用户名和域名的元组 (username, domain)
     """
-    # 请在下方编写代码
-    # 使用split()方法分割电子邮件地址，返回用户名和域名的元组
-    pass 
+    if not isinstance(email, str) or '@' not in email:
+        return ('', '')
+    username, domain = email.split('@', 1)
+    return (username, domain) 

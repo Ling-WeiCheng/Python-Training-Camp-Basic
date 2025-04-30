@@ -1,7 +1,7 @@
 """
 测试练习: 集合操作
 """
-import pytest
+import pytest # type: ignore
 import sys
 import os
 
@@ -12,7 +12,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from exercises.set_operations import student_set_operations
 
 def test_student_set_operations():
-    """测试学生集合操作函数"""
+    """测试学生集合操作函数""" 
     # 初始学生集合
     math_club = {"张三", "李四", "王五"}
     coding_club = {"李四", "王五", "赵六"}

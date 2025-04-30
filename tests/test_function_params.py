@@ -1,7 +1,7 @@
 """
 测试练习: 函数定义与参数
 """
-import pytest
+import pytest # type: ignore
 import sys
 import os
 

@@ -1,7 +1,7 @@
 """
 测试练习: if-elif-else 条件语句
 """
-import pytest
+import pytest # type: ignore
 import sys
 import os
 

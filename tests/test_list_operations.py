@@ -1,7 +1,7 @@
 """
 测试练习: 列表操作
 """
-import pytest
+import pytest # type: ignore
 import sys
 import os
 

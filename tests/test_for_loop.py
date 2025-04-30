@@ -1,7 +1,7 @@
 """
 测试练习: for循环
 """
-import pytest
+import pytest # type: ignore
 import sys
 import os
 

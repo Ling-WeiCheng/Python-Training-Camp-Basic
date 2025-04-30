@@ -1,7 +1,7 @@
 """
 测试练习: 面向对象编程基础
 """
-import pytest
+import pytest # type: ignore
 import sys
 import os
 import io
