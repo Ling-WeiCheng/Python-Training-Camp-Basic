@@ -1,7 +1,7 @@
 """
 测试练习: 使用math模块
 """
-import pytest
+import pytest # type: ignore
 import sys
 import os
 
